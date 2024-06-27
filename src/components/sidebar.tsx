@@ -1,37 +1,45 @@
-import Image from "next/image";
-import React from "react";
-import { CiLogout } from "react-icons/ci";
-import { SiderBarItems } from ".";
+import Image from 'next/image';
+import React from 'react';
+import { CiLogout } from 'react-icons/ci';
+import { SiderBarItems } from '.';
 import {
+  IoAddSharp,
+  IoBaseballOutline,
   IoCalendarOutline,
   IoCheckboxOutline,
   IoCodeWorkingOutline,
   IoListOutline,
-} from "react-icons/io5";
-const menuItems = [
-  {
-    icon: <IoCalendarOutline />,
-    title: "Dasboard",
-    path: "/dashboard",
-  },
-  {
-    icon: <IoCheckboxOutline />,
-    title: "Rest TODOS",
-    path: "/dashboard/rest-todos",
-  },
-  {
-    icon: <IoListOutline />,
-    title: "Server Actions",
-    path: "/dashboard/server-todos",
-  },
-  {
-    icon: <IoCodeWorkingOutline />,
-    title: "Cookies",
-    path: "/dashboard/cookies",
-  },
-];
+} from 'react-icons/io5';
 
 export const Sidebar = () => {
+  const menuItems = [
+    {
+      icon: <IoCalendarOutline />,
+      title: 'Dasboard',
+      path: '/dashboard',
+    },
+    {
+      icon: <IoCheckboxOutline />,
+      title: 'Rest TODOS',
+      path: '/dashboard/rest-todos',
+    },
+    {
+      icon: <IoListOutline />,
+      title: 'Server Actions',
+      path: '/dashboard/server-todos',
+    },
+    {
+      icon: <IoCodeWorkingOutline />,
+      title: 'Cookies',
+      path: '/dashboard/cookies',
+    },
+    {
+      icon: <IoBaseballOutline />,
+      title: 'Products',
+      path: '/dashboard/products',
+    },
+  ];
+
   return (
     <>
       {/* TODO: src/components <Sidebar /> */}
