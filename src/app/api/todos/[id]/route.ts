@@ -40,7 +40,7 @@ export async function PUT(request: Request, { params }: Segments) {
     if (!todo) {
       return NextResponse.json(
         { message: `Todo con id ${id} no existe` },
-        { status: 4040 }
+        { status: 404 }
       );
     }
 
@@ -56,4 +56,10 @@ export async function PUT(request: Request, { params }: Segments) {
   } catch (error) {
     return NextResponse.json(error, { status: 400 });
   }
+}
+
+interface Segments {
+  params: {
+    id: string;
+  };
 }
