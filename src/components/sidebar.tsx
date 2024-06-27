@@ -1,27 +1,33 @@
-import Image from 'next/image';
-import React from 'react';
-import { CiLogout } from 'react-icons/ci';
-import { SiderBarItems } from '.';
+import Image from "next/image";
+import React from "react";
+import { CiLogout } from "react-icons/ci";
+import { SiderBarItems } from ".";
 import {
   IoCalendarOutline,
   IoCheckboxOutline,
+  IoCodeWorkingOutline,
   IoListOutline,
-} from 'react-icons/io5';
+} from "react-icons/io5";
 const menuItems = [
   {
     icon: <IoCalendarOutline />,
-    title: 'Dasboard',
-    path: '/dashboard',
+    title: "Dasboard",
+    path: "/dashboard",
   },
   {
     icon: <IoCheckboxOutline />,
-    title: 'Rest TODOS',
-    path: '/dashboard/rest-todos',
+    title: "Rest TODOS",
+    path: "/dashboard/rest-todos",
   },
   {
     icon: <IoListOutline />,
-    title: 'Server Actions',
-    path: '/dashboard/server-todos',
+    title: "Server Actions",
+    path: "/dashboard/server-todos",
+  },
+  {
+    icon: <IoCodeWorkingOutline />,
+    title: "Cookies",
+    path: "/dashboard/cookies",
   },
 ];
 
