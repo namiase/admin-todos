@@ -1,14 +1,18 @@
-import { ProductCard } from '@/products';
-import { products } from '@/products/data/products';
+import { ProductCard } from "@/products";
+import { products } from "@/products/data/products";
 
-export default function ProductPage() {
+export default function ProductsPage() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-      {products.map((product) => (
-        <div key={product.id}>
-          <ProductCard {...product} />
-        </div>
-      ))}
+      
+      {/* ProductCard */}
+      {
+        products.map((product) => (
+          <ProductCard key={ product.id } { ...product } />
+        ))
+      }
+
+
     </div>
   );
 }

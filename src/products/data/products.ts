@@ -1,12 +1,13 @@
 export interface Product {
-  id: string;
-  name: string;
-  price: number;
+  id    : string;
+  name  : string;
+  price : number;
   rating: number;
-  image: string;
+  image : string;
 }
 
-export const products: Product[] = [
+
+export const products:Product[] = [
   {
     id: 'UUID-ABC-1',
     name: 'Teslo Hoodie',
@@ -35,4 +36,4 @@ export const products: Product[] = [
     rating: 5,
     image: '/images/products/1742702-00-A_0_2000.jpg',
   },
-];
+]

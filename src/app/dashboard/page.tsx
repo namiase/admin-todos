@@ -1,15 +1,17 @@
+import { auth } from '@/auth';
 import { WidgetItem } from '@/components';
-import React from 'react';
+import { redirect } from 'next/navigation';
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  const session = await auth();
+
+  if (!session) redirect('api/auth/signin');
+
   return (
-    <div>
-      {/* TODO: dashboard/page.tsx  */}
-      {/* Este contenido va dentro de page.tsx */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <WidgetItem />
-      </div>
-      {/* TODO: fin del dashboard/page.tsx  */}
+    <div className="grid gap-6 grid-cols-1 sm:grid-cols-2">
+      <WidgetItem title="Usuario conectado S-side">
+        <h1>{session?.user?.name ?? ''}</h1>
+      </WidgetItem>
     </div>
   );
 }
